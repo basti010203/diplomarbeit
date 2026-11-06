@@ -1,0 +1,29 @@
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.synctex.gz
+*.pdf
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.bcf-SAVE-ERROR
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+main.pdf
+# Firmenmaterial, nicht pushen
+material/

@@ -1,0 +1,82 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\graphicspath{{bilder/}}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[style=numeric,urldate=long]{biblatex}
+\addbibresource{literatur.bib}
+
+% Code-Listings
+\definecolor{codegrau}{gray}{0.95}
+\definecolor{codekommentar}{rgb}{0.35,0.45,0.35}
+\definecolor{codestring}{rgb}{0.6,0.1,0.1}
+\lstdefinelanguage{TypeScript}{
+  keywords={abstract,as,async,await,boolean,break,case,catch,class,const,constructor,
+    continue,default,else,export,extends,false,finally,for,from,function,if,implements,
+    import,interface,let,new,null,number,private,public,readonly,return,static,string,
+    super,this,throw,true,try,type,undefined,void,while},
+  sensitive=true,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  morestring=[b]`
+}
+\lstdefinelanguage{GraphQL}{
+  keywords={query,mutation,input,schema,true,false,null},
+  sensitive=true,
+  comment=[l]{\#},
+  morestring=[b]"
+}
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  backgroundcolor=\color{codegrau},
+  keywordstyle=\color{blue!60!black}\bfseries,
+  commentstyle=\color{codekommentar}\itshape,
+  stringstyle=\color{codestring},
+  frame=single,
+  rulecolor=\color{gray!60},
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  showstringspaces=false,
+  captionpos=b,
+  literate={ä}{{\"a}}1 {ö}{{\"o}}1 {ü}{{\"u}}1 {Ä}{{\"A}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1
+}
+\renewcommand{\lstlistingname}{Codeausschnitt}
+
+\title{Titel eurer Diplomarbeit}
+\author{Name 1 \and Name 2 \and Name 3}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\input{kapitel/01-einleitung}
+\input{kapitel/02-grundlagen}
+\input{kapitel/03-projektorganisation}
+\input{kapitel/04-entwicklungsumgebung}
+\input{kapitel/05-architektur}
+\input{kapitel/06-projekt-a}
+\input{kapitel/07-konzeption}
+\input{kapitel/08-architektur-iteration}
+\input{kapitel/09-implementierung}
+\input{kapitel/10-fazit}
+
+\printbibliography
+
+\end{document}
